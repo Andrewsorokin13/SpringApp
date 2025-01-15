@@ -8,10 +8,21 @@
 import Foundation
 
 struct AnimationDetails {
-    let titel: String
+    let title: String
     let curve: String
     let force: Double
     let duration: Double
     let delay: Double
     
+    var animationDescription: String {
+        """
+        Текущая анимация: \(title)
+        
+        Параметры анимации
+        Curve: \(curve.roundedToTwoDecimalPlaces())
+        Force: \(force.toStringWithTwoDecimalPlaces())
+        Duration: \(duration.toStringWithTwoDecimalPlaces())
+        Delay: \(delay.toStringWithTwoDecimalPlaces())
+        """
+    }
 }

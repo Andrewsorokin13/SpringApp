@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension Double {
+    func toStringWithTwoDecimalPlaces() -> String {
+        return String(format: "%.02f", self)
+    }
+}

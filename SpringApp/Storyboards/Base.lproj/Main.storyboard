@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpringApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMQ-sl-3OH" customClass="SpringView" customModule="SpringAnimation">
+                                <rect key="frame" x="78.666666666666671" y="79.000000000000014" width="235.66666666666663" height="170.33333333333337"/>
+                                <color key="backgroundColor" red="0.76859849690000004" green="0.70432723379999995" blue="0.60649233920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZT-Et-LcA" customClass="SpringLabel" customModule="SpringAnimation">
+                                <rect key="frame" x="78.666666666666671" y="340.66666666666669" width="235.66666666666663" height="170.66666666666669"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fT-7Q-xIV">
+                                <rect key="frame" x="78.666666666666671" y="565.66666666666663" width="235.66666666666663" height="48"/>
+                                <color key="backgroundColor" red="0.76859849690000004" green="0.70432723379999995" blue="0.60649233920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="qjv-ih-1j8"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startAnimationWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVo-DL-3aJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BZT-Et-LcA" firstAttribute="height" secondItem="QMQ-sl-3OH" secondAttribute="height" id="0Yz-u4-T24"/>
+                            <constraint firstItem="1fT-7Q-xIV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0es-n4-llk"/>
+                            <constraint firstItem="BZT-Et-LcA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3tV-BC-rON"/>
+                            <constraint firstItem="QMQ-sl-3OH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="AgR-1n-hOP"/>
+                            <constraint firstItem="BZT-Et-LcA" firstAttribute="width" secondItem="QMQ-sl-3OH" secondAttribute="width" id="FjP-di-49u"/>
+                            <constraint firstItem="1fT-7Q-xIV" firstAttribute="width" secondItem="QMQ-sl-3OH" secondAttribute="width" id="Y97-jk-Zsz"/>
+                            <constraint firstItem="BZT-Et-LcA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hXP-bO-VP0"/>
+                            <constraint firstItem="QMQ-sl-3OH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="i8y-bq-6So"/>
+                            <constraint firstItem="QMQ-sl-3OH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="iwL-Kw-UtJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1fT-7Q-xIV" secondAttribute="bottom" multiplier="4:3" id="oAP-m0-l3p"/>
+                            <constraint firstItem="QMQ-sl-3OH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z95-Dj-cKR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animatedView" destination="QMQ-sl-3OH" id="dq3-Fx-GnO"/>
+                        <outlet property="descriptionAnimationLabel" destination="BZT-Et-LcA" id="Uhb-X6-j26"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="50" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
